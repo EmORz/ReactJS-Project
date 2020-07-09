@@ -1,28 +1,33 @@
 import React, { Component } from "react";
 
 class Input extends Component {
-  constructor(props) {
-    super(props);
+  // constructor(props) {
+  //   super(props);
 
-    this.state = {
-      value: "   ",
-    };
-  }
+  //   this.state = {
+  //     value: "   ",
+  //   };
+  // }
 
-  chageValue = (e)=>{
-      this.setState({
-          value: e.target.value
+  // chageValue = (e)=>{
+  //     this.setState({
+  //         value: e.target.value
 
-      })
-  }
+  //     })
+  // }
 
   render() {
+    const { name, type = 'text', value, onChange, label } = this.props;
     return (
-      <div>
-        <input onChange={this.chageValue} />
-
-        <p> {this.state.value}</p>
-      </div>
+        <div>
+            <label htmlFor="new-email">{label}</label>
+            <input
+                onChange={onChange}
+                name={name}
+                id={name}
+                type={type}
+                value={value} />
+        </div>
     );
   }
 }
