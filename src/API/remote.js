@@ -1,8 +1,8 @@
-const host = "http://localhost:9999/user/register";
+const host = "http://localhost:9999/user/";
 
 async function register(username, password) {
-  //console.log('here', name, email, password, 'Here<-')
-  const res = await fetch(host, {
+
+  const res = await fetch(host+'register', {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -12,12 +12,12 @@ async function register(username, password) {
       password,
     }),
   });
-  console.log(res);
+
   return await res.json();
 }
 
 async function login(email, password) {
-  const res = await fetch(host + "auth/login", {
+  const res = await fetch(host + "login", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

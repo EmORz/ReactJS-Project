@@ -7,6 +7,10 @@ import Counter from "./Counter";
 import Input from "./Input";
 import Register from "./RegisterPage";
 
+import Footer from './Footer/Footer'
+import Navigation from './Navigation/Navigation'
+
+
 class ClassApp extends Component {
   constructor(props) {
     super(props);
@@ -58,6 +62,7 @@ class ClassApp extends Component {
 
     return (
       <div className="App">
+        <Navigation/>
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
 
@@ -84,6 +89,7 @@ class ClassApp extends Component {
             Learn React
           </a>
         </header>
+        <Footer/>
       </div>
     );
   }

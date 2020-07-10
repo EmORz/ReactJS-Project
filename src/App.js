@@ -1,4 +1,6 @@
 import React from "react";
+import Footer from './Footer/Footer'
+import Navigation from './Navigation/Navigation'
 //import { Route, Switch, withRouter } from "react-router-dom";
 
 import logo from "./logo.svg";
@@ -9,6 +11,7 @@ import Button from "./Button";
 function App() {
   return (
     <div className="App">
+      <Navigation></Navigation>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <Button />
@@ -27,6 +30,7 @@ function App() {
           Learn React
         </a>
       </header>
+      <Footer/>
     </div>
   );
 }
